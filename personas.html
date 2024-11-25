@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jujutsu Kaisen - Personagens</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="personas.css">
+</head>
+<body class="light-mode">
+    <header>
+        <nav>
+            <a href="index.html"><i class="fas fa-home"></i> Início</a>
+            <a href="personas.html"><i class="fas fa-users"></i> Personagens</a>
+            <a href="episodes.html"><i class="fas fa-tv"></i> Episódios</a>
+            <a href="contact.html"><i class="fas fa-envelope"></i> Contato</a>
+            <button id="theme-toggle"><i class="fas fa-adjust"></i> Modo Escuro</button>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Splash&display=swap" rel="stylesheet">
+        <h1>Personagens</h1>
+    </div>
+
+    <div class="content">
+        <div class="character-card" onclick="openModal('yuji')">
+            <img src="https://th.bing.com/th/id/OIP.FHUtuSNLX6gU-qAOl8vhmgHaEK?w=280&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Yuji Itadori">
+            <p>Yuji Itadori</p>
+        </div>
+        <div class="character-card" onclick="openModal('megumi')">
+            <img src="https://th.bing.com/th/id/OIP.EyaqUzL4vTmcP_fyFh2dHQHaK9?pid=ImgDet&w=185&h=273&c=7&dpr=1,3" alt="Megumi Fushiguro">
+            <p>Megumi Fushiguro</p>
+        </div>
+        <div class="character-card" onclick="openModal('nobara')">
+            <img src="https://th.bing.com/th/id/OIP.vYM66xXsguUl3D9MqMjXHwHaEK?w=305&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Nobara Kugisaki">
+            <p>Nobara Kugisaki</p>
+        </div>
+        <div class="character-card" onclick="openModal('satorou')">
+            <img src="https://th.bing.com/th/id/OIP.DOiuqKuI7nPecZeqiAFhjwHaEK?w=292&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Satorou Gojo">
+            <p>Satorou Gojo</p>
+        </div>
+        <div class="character-card" onclick="openModal('sukuna')">
+            <img src="https://th.bing.com/th/id/OIP.bBlNy5VsNRXmkhHuUmlJmgHaEK?w=276&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Ryomen Sukuna">
+            <p>Ryomen Sukuna</p>
+        </div>
+        <div class="character-card" onclick="openModal('nanami')">
+            <img src="https://th.bing.com/th/id/OIP.iAq2sHgjnb1bD7ABcCDwwgHaHa?w=169&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Kento Nanami">
+            <p>Kento Nanami</p>
+        </div>
+        <div class="character-card" onclick="openModal('yaga')">
+            <img src="https://th.bing.com/th/id/OIP.gkunppo6a_ExnRcgU5S0KwAAAA?w=154&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Masamichi Yaga">
+            <p>Masamichi Yaga</p>
+        </div>
+        <div class="character-card" onclick="openModal('geto')">
+            <img src="https://th.bing.com/th/id/OIP.Hfc8WAhwJT2QwLNPuPrGZgHaEk?w=257&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Suguru Geto">
+            <p>Suguru Geto (Kenjaku)</p>
+        </div>
+        <div class="character-card" onclick="openModal('maki')">
+            <img src="https://th.bing.com/th/id/OIP.W8BeqUXKg6GbkUR6Lx2mfgHaHa?w=188&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Maki Zenin">
+            <p>Maki Zenin</p>
+        </div>
+        <div class="character-card" onclick="openModal('inumaki')">
+            <img src="https://th.bing.com/th/id/OIP.bpYYnpX1vscSI8LCkS68MQHaHa?w=177&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Toge Inumaki">
+            <p>Toge Inumaki</p>
+        </div>
+        <div class="character-card" onclick="openModal('panda')">
+            <img src="https://th.bing.com/th/id/OIP._JXJ1uOVHII5iP-2V4ABrAHaHa?w=180&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Panda">
+            <p>Panda</p>
+        </div>
+        <div class="character-card" onclick="openModal('yuta')">
+            <img src="https://th.bing.com/th/id/OIP.VUdOvy04vlsatSQoDmz8JgHaHa?w=156&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Yuta Okkotsu">
+            <p>Yuta Okkotsu</p>
+        </div>
+        <div class="character-card" onclick="openModal('yoshinobu')">
+            <img src="https://th.bing.com/th/id/OIP.RWkWAdfsDlo0HvasSNv5bQHaEH?w=295&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Yoshinobu Gakuganji">
+            <p>Yoshinobu Gakuganji</p>
+        </div>
+        <div class="character-card" onclick="openModal('utahime')">
+            <img src="https://th.bing.com/th/id/OIP.zEbZCkAkmGmTS5VOZC92mQHaHa?w=186&h=186&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Utahime Iori">
+            <p>Utahime Iori</p>
+        </div>
+        <div class="character-card" onclick="openModal('shoko')">
+            <img src="https://th.bing.com/th/id/OIP.WJ8zvFWvM-sl1YkzmHWQEgAAAA?w=140&h=209&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Shoko Ieiri">
+            <p>Shoko Ieiri</p>
+        </div>
+        <div class="character-card" onclick="openModal('mei')">
+            <img src="https://th.bing.com/th/id/OIP.D2S802Ws2CtbgdZrfmVWWgHaEK?w=182&h=102&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Mei Mei">
+            <p>Mei Mei</p>
+        </div>
+        <div class="character-card" onclick="openModal('mai')">
+            <img src="https://th.bing.com/th/id/OIP.9ybeD8usMlI_6Y9YHBQzTgHaEK?w=315&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Mai Zenin">
+            <p>Mai Zenin</p>
+        </div>
+        <div class="character-card" onclick="openModal('todo')">
+            <img src="https://th.bing.com/th/id/OIP.F1EQpVoYjbZLCE_eQu19UgHaEK?w=300&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Aoi Todo">
+            <p>Aoi Todo</p>
+        </div>
+        <div class="character-card" onclick="openModal('miwa')">
+            <img src="https://th.bing.com/th/id/OIP.apaxx6QFyLRJmEVsKG6MLwHaEK?w=328&h=184&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Kasumi Miwa">
+            <p>Kasumi Miwa</p>
+        </div>
+        <div class="character-card" onclick="openModal('momo')">
+            <img src="https://th.bing.com/th/id/OIP.loaKHUVjsdUWuTAefQtY1gHaHa?w=219&h=219&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Momo Nishimiya">
+            <p>Momo Nishimiya</p>
+        </div>
+        <div class="character-card" onclick="openModal('kamo')">
+            <img src="https://th.bing.com/th/id/OIP.NhpbWMPk_NUWa_RKA5e3owHaKW?w=120&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Noritoshi Kamo">
+            <p>Noritoshi Kamo</p>
+        </div>
+        <div class="character-card" onclick="openModal('tengen')">
+            <img src="https://th.bing.com/th/id/OIP.uxr0VqK-l9GRO8lAgJpW-AHaFn?w=225&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Tengen">
+            <p>Tengen</p>
+        </div>
+        <div class="character-card" onclick="openModal('yuki')">
+            <img src="https://th.bing.com/th/id/OIP.YnW7WwOQXo9VoFXm4txwYgHaDt?w=332&h=174&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Yuki Tsukumo">
+            <p>Yuki Tsukumo</p>
+        </div>
+        <div class="character-card" onclick="openModal('toji')">
+            <img src="https://th.bing.com/th/id/OIP.lzH_FjcQHP2rMFt-__xicwHaEK?w=324&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Toji Fushiguro">
+            <p>Toji Fushiguro</p>
+        </div>
+        <div class="character-card" onclick="openModal('mahito')">
+            <img src="https://th.bing.com/th/id/OIP.mHD3qRX6VS0-Vv7f3hI0cQHaHa?w=178&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Mahito">
+            <p>Mahito</p>
+        </div>
+        <div class="character-card" onclick="openModal('hanami')">
+            <img src="https://th.bing.com/th/id/OIP.aqiZo8q1j99b8S5X1mGkAwHaEK?w=320&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Hanami">
+            <p>Hanami</p>
+        </div>
+        <div class="character-card" onclick="openModal('jogo')">
+            <img src="https://th.bing.com/th/id/OIP.j36xH17O7ORkDRkbSLrxpAHaDt?w=349&h=174&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Jogo">
+            <p>Jogo</p>
+        </div>
+        <div class="character-card" onclick="openModal('choso')">
+            <img src="https://th.bing.com/th/id/OIP.VAY_UpWjsEtXnBGP2QdLwAAAAA?w=249&h=168&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Choso">
+            <p>Choso</p>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Jujutsu Kaisen. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="personas.js"></script>
+</body>
+</html>

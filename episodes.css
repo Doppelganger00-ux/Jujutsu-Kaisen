@@ -1,0 +1,304 @@
+/* === Reset Básico === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* === Estilo Geral do Corpo === */
+body {
+    font-family: "Bokor", system-ui, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s; /* Transições suaves */
+}
+
+/* === Modos Claro e Escuro === */
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* === Cabeçalho e Navegação === */
+header {
+    background: linear-gradient(90deg, #060a6d, #02031d);
+    color: #fff;
+    padding: 1.3rem 0;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1.2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease, padding 0.3s ease;
+}
+
+nav a:hover {
+    color: #7407cd;
+    transform: scale(1.1);
+    padding-bottom: 5px;
+    border-bottom: 2px solid #280552;
+}
+
+/* === Botão de Alternância de Tema === */
+#theme-toggle {
+    background-color: transparent;
+    color: inherit;
+    border: 2px solid currentColor;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#theme-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#theme-toggle i {
+    margin-right: 8px;
+}
+
+/* === Banner === */
+.banner {
+    background: url('https://th.bing.com/th/id/OIP.4uvdT3sVVvKpkndLoQz5LwHaDt?w=350&h=175&c=7&r=0&o=5&dpr=1.3&pid=1.7') center/cover no-repeat;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.banner h1 {
+    font-family: "Splash", cursive;
+    font-size: 12rem;
+    letter-spacing: 2rem;
+    color: #eaeaea;
+    z-index: 2;
+    text-shadow: 0 0 15px #8e44ad, 0 0 30px #9b59b6, 0 0 45px #d2b4de;
+    animation: textGlow 2s infinite alternate;
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+}
+
+/* === Ajuste de Banner por Tema === */
+body.light-mode .banner h1 {
+    color: #ffffff;
+    text-shadow: 0 0 10px #635d7e, 0 0 20px #85c1e9, 0 0 30px #aed6f1;
+}
+
+body.dark-mode .banner h1 {
+    color: #ffffff;
+    text-shadow: 0 0 20px #4450ad, 0 0 30px #7b7ac5, 0 0 50px #b4bade;
+}
+
+/* === Conteúdo === */
+.content {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode .content {
+    background-color: #ffffff;
+    color: #333;
+}
+
+body.dark-mode .content {
+    background-color: #2d2d2d;
+    box-shadow: 0 10px 25px rgba(155, 154, 154, 0.5);
+}
+
+/* === Container de Episódios === */
+.episodes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    margin-top: 2rem;
+}
+
+.episodes-container h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 2rem;
+    background-color: #7407cd;
+    color: #ffffff;
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* === Card de Episódio === */
+.episode-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 260px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    min-height: 380px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.episode-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+}
+
+.episode-card h3 {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    color: #02031d;
+    transition: color 0.5s ease;
+}
+
+.episode-card p {
+    font-size: 1rem;
+    color: #2c2a2a;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
+/* === Botão do Card === */
+.episode-card button {
+    background-color: #7407cd;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 90%;
+    margin: 0 auto;
+    transition: background-color 0.1s ease;
+}
+
+.episode-card button:hover {
+    background-color: #5b02a1;
+}
+
+/* === Modal === */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 800px;
+    width: 80%;
+    height: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content iframe {
+    padding-top: 18px;
+    width: 93%;
+    height: 445px;
+    border: none;
+}
+
+.close {
+    position: absolute;
+    top: 7px;
+    right: 20px;
+    font-size: 26px;
+    color: #333;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #f00;
+}
+
+/* === Rodapé === */
+footer {
+    background-color: #02031d;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* === Responsividade === */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 0.5rem 0;
+    }
+
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .content {
+        margin: 2rem;
+        padding: 1.5rem;
+    }
+}

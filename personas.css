@@ -1,0 +1,311 @@
+body {
+    font-family: "Bokor", system-ui, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    line-height: 1.6;
+}
+
+body.light-mode {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+body.dark-mode {
+    background-color: #0d1117;
+    color: #e6edf3;
+}
+
+/* Transições gerais */
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+header {
+    background: linear-gradient(90deg, #060a6d, #02031d);
+    color: #fff;
+    padding: 1.3rem 0;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1.2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease, padding 0.3s ease;
+}
+
+nav a:hover {
+    color: #7407cd;
+    transform: scale(1.1);
+    padding-bottom: 5px;
+    border-bottom: 2px solid #280552;
+}
+
+#theme-toggle {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 8px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+#theme-toggle i {
+    margin-right: 8px;
+}
+
+#theme-toggle:hover {
+    background-color: #15045a;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.banner {
+    background: url('https://4kwallpapers.com/images/wallpapers/jujutsu-kaisen-3840x2160-9277.jpg') center/cover no-repeat;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.banner h1 {
+    font-family: "Splash", cursive;
+    color: #0f0f0f;
+    font-size: 12.5rem;
+    letter-spacing: 2rem;
+    z-index: 2;
+    animation: textGlow 1.5s infinite alternate;
+    text-shadow: 0 0 10px #9b0e0e, 0 0 20px #ff6f61, 0 0 40px #ff6f61;
+}
+
+.banner h1.light-mode {
+    color: #e6e7ff;
+    text-shadow: 0 0 10px #635d7e, 0 0 20px #85c1e9, 0 0 30px #aed6f1;
+}
+
+.banner h1.dark-mode {
+    color: #000000;
+}
+
+.content {
+    max-width: 1420px;
+    font-size: 3rem;
+    margin: 3rem auto;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(120deg, #1f1f1f, #2a2a2a);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-out;
+    color: #a31d10;
+}
+
+.content.light-mode {
+    background: linear-gradient(120deg, #ffffff, #f0f0f0);
+    color: #333;
+}
+
+.content.dark-mode {
+    background: linear-gradient(120deg, #2d2d2d, #3b3b3b);
+    color: #e6edf3;
+}
+
+.character-card {
+    display: inline-block;
+    margin: 1.5rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 250px;
+    height: 350px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.character-card img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.character-card p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    color: #333;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content img {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.modal-content p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    text-align: center;
+    padding: 0 40px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    z-index: 1010;
+}
+
+.close:hover {
+    color: #f00;
+}
+
+footer {
+    background-color: #02031d;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+}
+
+footer .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    color: #bbb;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 0.5rem 0;
+    }
+
+    .banner {
+        height: 50vh;
+    }
+
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 10px #9b0e0e, 0 0 20px #ff6f61, 0 0 40px #ff6f61;
+    }
+    100% {
+        text-shadow: 0 0 10px #9b0e0e, 0 0 20px #ff6f61, 0 0 40px #ff6f61;
+    }
+}
